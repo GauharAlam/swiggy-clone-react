@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function RestCard({ restInfo }) {
   // Destructuring for cleaner code
   const {
@@ -9,7 +11,7 @@ export default function RestCard({ restInfo }) {
   } = restInfo?.info;
 
   return (
-    // FIX: Using a valid width class. Added padding and hover effects.
+    <Link to={"/city/delhi/"+restInfo?.info?.id}>
     <div className="w-[280px] p-3 rounded-lg transition-transform duration-200  hover:scale-95">
       <img
         // FIX: Using standard Tailwind height class and w-full.
@@ -18,7 +20,7 @@ export default function RestCard({ restInfo }) {
           "https://media-assets.swiggy.com/swiggy/image/upload/" +
           cloudinaryImageId
         }
-        // FIX: More descriptive alt text for accessibility.
+
         alt={name}
       />
 
@@ -43,5 +45,6 @@ export default function RestCard({ restInfo }) {
         </p>
       </div>
     </div>
+    </Link>
   );
 }
