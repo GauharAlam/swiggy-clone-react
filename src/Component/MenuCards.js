@@ -11,7 +11,7 @@ export default function MenuCard({menuItems}){
                 {
                     menuItems?.itemCards?.map((items)=>{
                         // Add this console.log to inspect the data for each item
-                        console.log("Item Info Object:", items?.card?.info); 
+                        {/* console.log("Item Info Object:", items?.card?.info);  */}
                         
                         return <RestInfo key={items?.card?.info?.id} restData = {items?.card?.info}></RestInfo>
                     })
