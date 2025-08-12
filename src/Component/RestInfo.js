@@ -27,7 +27,7 @@ export default function RestInfo({restData}){
         </div>
         <div className="w-[20%] relative">
             <img className="w-full h-36 object-cover rounded-2xl" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/" + restData?.imageId} alt={restData?.name}/>
-            <button  className="absolute bottom-0 left-20 rounded-[2px] text-xl  -translate-x-1/2 text-green-600 px-6 py-2 bg-white font-semibold">Add</button>
+            <button  className="absolute bottom-0 left-20 rounded-[4px] text-xl  -translate-x-1/2 text-green-600 px-6 py-2 bg-white font-semibold">Add</button>
         </div>
 
         </div>

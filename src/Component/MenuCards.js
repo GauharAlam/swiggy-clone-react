@@ -1,7 +1,10 @@
+import { useState } from "react"
 import RestInfo from "./Restinfo"
 
 
 export default function MenuCard({menuItems}){
+
+    const [isOpen , setisOpen] = useState(true);
 
     // Case: menuItems has "categories"
     if("categories" in menuItems)
@@ -18,9 +21,25 @@ export default function MenuCard({menuItems}){
     )
 }
 
+
+    if(!isOpen){
+        return(
+        <div className="w-full">
+        <div className="flex justify-between w-full">
+            <p className="text-3xl font-bold">{menuItems?.title}</p>
+            <button className="text-4xl font-bold mr-20" onClick={()=>setisOpen(!isOpen)}>{isOpen?'˅':'⌃'}</button>
+            </div>
+            <div className="h-6 bg-gray-400 mt-2 mb-2"></div>
+        </div> 
+        )   
+    }
+
     return(
         <div className="w-full">
+            <div className="flex justify-between w-full">
             <p className="text-3xl font-bold">{menuItems?.title}</p>
+            <button className="text-4xl font-bold mr-20" onClick={()=>setisOpen(!isOpen)}>{isOpen?'˅':'⌃'}</button>
+            </div>
             <div>
                 {
                     menuItems?.itemCards?.map((items)=>{
@@ -31,6 +50,7 @@ export default function MenuCard({menuItems}){
                     })
                 }
             </div>
+            <div className="h-6 bg-gray-300 mt-2 mb-2"></div>
         </div>
     )
 }
