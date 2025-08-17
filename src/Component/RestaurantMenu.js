@@ -18,10 +18,10 @@ export default function RestaurantMenu() {
       // "https://api.codetabs.com/v1/proxy/?quest="
       // "https://api.allorigins.win/get?url=";
       // "https://cors-anywhere.herokuapp.com/"
-      const proxyUrl ="https://api.codetabs.com/v1/proxy/?quest=";
+      // const proxyUrl ="https://api.codetabs.com/v1/proxy/?quest=";
       const swiggyApi = `https://www.swiggy.com/mapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.7040592&lng=77.10249019999999&restaurantId=${id}&submitAction=ENTER`;
 
-     const response = await fetch(proxyUrl + encodeURIComponent(swiggyApi));
+     const response = await fetch(swiggyApi);
 
       console.log(response);
 

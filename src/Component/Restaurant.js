@@ -10,10 +10,8 @@ export default function Restaurant() {
       try {
         const swiggyApiUrl =
           "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6327&lng=77.2198&is-seo-homepage-enabled=true&";
-        const proxyUrl = "https://api.codetabs.com/v1/proxy/?quest=";
-        const response = await fetch(
-          proxyUrl + encodeURIComponent(swiggyApiUrl)
-        );
+        // const proxyUrl = "https://api.codetabs.com/v1/proxy/?quest=";
+        const response = await fetch(swiggyApiUrl);
         const swiggyData = await response.json(); // Directly get JSON
 
         const restaurants =
