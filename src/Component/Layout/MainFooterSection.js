@@ -1,6 +1,6 @@
-import FoodDeliveryCities from "./FoodDeliveryCities";
-import GroceryDeliveryCities from "./GroceryDeliveryCities";
-import Footer from "./Footer";
+import FoodDeliveryCities from "../Features/Food/FoodDeliveryCities";
+import GroceryDeliveryCities from "../Features/Food/GroceryDeliveryCities";
+import Footer from "../Footer/Footer";
 
 export default function MainFooterSection() {
   return (

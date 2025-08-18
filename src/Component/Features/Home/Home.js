@@ -1,8 +1,8 @@
-import Header from "./Header"
-import FoodOption from "./FoodOption"
-import GroceryOption from "./GroceryOption"
-import DineOption from "./DineOption"
-import MainFooterSection from "./MainFooterSection"
+import Header from "../../Header/Header"
+import FoodOption from "../Food/FoodOption"
+import GroceryOption from "../Food/GroceryOption"
+import DineOption from "../Food/DineOption"
+import MainFooterSection from "../../Layout/MainFooterSection"
 
 export default function Home(){
 

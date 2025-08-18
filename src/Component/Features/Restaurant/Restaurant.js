@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import RestCard from "./RestCard";
-import Shimmer from "./Shimmer";
+import RestCard from "../../Cards/RestCard";
+import Shimmer from "../../Shimmer/Shimmer";
 
 export default function Restaurant() {
   const [restData, setRestData] = useState([]);

@@ -1,5 +1,5 @@
 import { useState } from "react"
-import RestInfo from "./Restinfo"
+import RestInfo from "../Features/Restaurant/RestInfo"
 
 
 export default function MenuCard({menuItems,foodSelected}){

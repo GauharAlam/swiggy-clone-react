@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDom from "react-dom/client"
-import Home from "./Component/Home";
-import Restaurant from "./Component/Restaurant";
+import Home from "./Component/Features/Home/Home"
+import Restaurant from "./Component/Features/Restaurant/Restaurant";
 import { BrowserRouter,Routes,Route } from "react-router-dom";
-import RestaurantMenu from "./Component/RestaurantMenu";
-import SearchFood from "./Component/SearchFood";
+import RestaurantMenu from "./Component/Features/Restaurant/RestaurantMenu";
+import SearchFood from "./Component/Features/Food/SearchFood";
 
 
 
