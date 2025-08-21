@@ -1,19 +1,19 @@
-import { Linkedin, Instagram, Facebook,  Twitter } from "lucide-react";
+import { Linkedin, Instagram, Facebook, Twitter } from "lucide-react";
 
 export default function Footer() {
   return (
     <footer className="bg-gray-100 border-t border-gray-300">
-      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-6 gap-8 text-gray-700 text-sm">
+      {/* Top Section */}
+      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 text-gray-700 text-sm">
         
         {/* Logo & Copyright */}
-        <div className="col-span-2">
+        <div className="col-span-1 sm:col-span-2">
           <div className="flex items-center gap-2 mb-2">
             <img
               src="https://media-assets.swiggy.com/portal/testing/seo-home/Group.svg"
               alt="Swiggy"
               className="h-12 w-40"
             />
-            {/* <span className="text-orange-500 font-semibold text-xl">Swiggy</span> */}
           </div>
           <p className="text-xs text-gray-500">© 2025 Swiggy Limited</p>
         </div>
@@ -55,7 +55,7 @@ export default function Footer() {
             <li>Mumbai</li>
             <li>Pune</li>
           </ul>
-          <select className="mt-3 border border-gray-300 rounded px-2 py-1 text-sm">
+          <select className="mt-3 border border-gray-300 rounded px-2 py-1 text-sm w-full sm:w-auto">
             <option>685 cities</option>
           </select>
         </div>
@@ -71,8 +71,8 @@ export default function Footer() {
         </div>
 
         {/* Legal + Social Links */}
-        <div className="">
-          <h3 className="font-semibold mb-3 ">Legal</h3>
+        <div>
+          <h3 className="font-semibold mb-3">Legal</h3>
           <ul className="space-y-2 mb-6">
             <li>Terms & Conditions</li>
             <li>Cookie Policy</li>
@@ -90,11 +90,11 @@ export default function Footer() {
       </div>
 
       {/* Bottom App Download Section */}
-      <div className="border-t border-gray-300 py-6 text-center flex justify-center items-center gap-8">
-        <p className="mb-4 text-[#02060CBF] font-bold text-2xl ">
+      <div className="border-t border-gray-300 py-6 text-center flex flex-col lg:flex-row justify-center items-center gap-6 px-4">
+        <p className="text-[#02060CBF] font-bold text-xl lg:text-2xl text-center lg:text-left">
           For better experience, download the Swiggy app now
         </p>
-        <div className="flex justify-center gap-4">
+        <div className="flex justify-center gap-4 flex-wrap">
           <img
             src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200,h_65/icon-AppStore_lg30tv"
             alt="Download on App Store"

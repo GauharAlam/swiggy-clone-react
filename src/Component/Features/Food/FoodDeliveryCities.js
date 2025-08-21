@@ -31,42 +31,47 @@ const foodCities = [
   "Thiruvananthapuram",
   "Mangaluru",
   "Faridabad",
-  "Guntur"
+  "Guntur",
 ];
 
-// Constants to control the grid display
 const CITIES_PER_ROW = 4;
 const VISIBLE_ROWS = 3;
 const INITIAL_VISIBLE_COUNT = CITIES_PER_ROW * VISIBLE_ROWS;
 
 export default function FoodDeliveryCities() {
-  // State to manage the expanded/collapsed view
   const [isExpanded, setIsExpanded] = useState(false);
 
-  // Reusable style for the toggle button
-  const toggleButtonStyle = "border border-gray-300 rounded-xl py-4 px-2 text-center font-medium text-orange-500 hover:shadow-md transition";
+  const toggleButtonStyle =
+    "border border-gray-300 rounded-xl py-3 px-2 text-center font-medium text-orange-500 hover:shadow-md transition";
 
   return (
     <>
-      <div className="w-full mt-20 mb-20">
-        <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/m/seo/App_download_banner.png" alt="App download banner" />
+      {/* Banner */}
+      <div className="w-full mt-10 mb-10 px-4">
+        <img
+          src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/m/seo/App_download_banner.png"
+          alt="App download banner"
+          className="w-full h-auto object-cover rounded-lg shadow-md"
+        />
       </div>
-      <div className="my-10 max-w-[70%] mx-auto">
-        <h2 className="text-2xl font-bold mb-6">Cities with food delivery</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
+
+      {/* Cities Section */}
+      <div className="my-10 w-full max-w-6xl mx-auto px-4">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 text-gray-800 text-center md:text-left">
+          Cities with food delivery
+        </h2>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4">
           {isExpanded ? (
             <>
-              {/* --- EXPANDED VIEW --- */}
-              {/* Show all cities from the array */}
               {foodCities.map((city, index) => (
                 <button
                   key={index}
-                  className="border border-gray-300 rounded-xl py-4 px-2 text-center font-medium hover:shadow-md transition"
+                  className="border border-gray-300 rounded-xl py-3 px-2 text-center font-medium hover:shadow-md transition text-sm sm:text-base"
                 >
                   Order food online in {city}
                 </button>
               ))}
-              {/* Add the "Show Less" button at the end */}
               <button
                 onClick={() => setIsExpanded(false)}
                 className={toggleButtonStyle}
@@ -76,17 +81,14 @@ export default function FoodDeliveryCities() {
             </>
           ) : (
             <>
-              {/* --- COLLAPSED VIEW --- */}
-              {/* Show the first 11 cities (12 - 1) */}
               {foodCities.slice(0, INITIAL_VISIBLE_COUNT - 1).map((city, index) => (
                 <button
                   key={index}
-                  className="border border-gray-300 rounded-xl py-4 px-2 text-center font-medium hover:shadow-md transition"
+                  className="border border-gray-300 rounded-xl py-3 px-2 text-center font-medium hover:shadow-md transition text-sm sm:text-base"
                 >
                   Order food online in {city}
                 </button>
               ))}
-              {/* Add the "Show More" button in the 12th grid slot */}
               <button
                 onClick={() => setIsExpanded(true)}
                 className={toggleButtonStyle}
